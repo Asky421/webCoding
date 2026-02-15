@@ -1,0 +1,57 @@
+<!-- @format -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>仿手机锁屏 · 图案密码控件</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="lock-container">
+      <h2>✧ 绘制图案 ✧</h2>
+
+      <!-- 图案密码画板 -->
+      <div class="pattern-wrapper">
+        <canvas id="patternCanvas" width="300" height="300"></canvas>
+      </div>
+
+      <!-- 状态/反馈行 -->
+      <div class="status-bar">
+        <div class="indicator">
+          <span></span> 已连接 <span id="pointCount">9</span> 个点
+        </div>
+        <div class="max-indicator">最多9个点</div>
+      </div>
+
+      <!-- 缩略小点显示当前连接顺序 (视觉反馈) -->
+      <div class="pattern-dots" id="miniDotsContainer"></div>
+
+      <!-- 操作按钮组 -->
+      <div class="button-group">
+        <button class="btn btn-clear" id="clearBtn">
+          <svg
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M3 6h18M8 6V4h8v2M10 16v-6M14 16v-6M18 18L6 18M6 18L4 6M18 18l2-12"
+            />
+          </svg>
+          清空图案
+        </button>
+      </div>
+
+      <div class="footer-note">拖动手指 · 连接点 · 松开完成</div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
